@@ -29,7 +29,7 @@ const HomePage = () => {
   const fetchEmployees = async (department = "") => {
     try {
       setLoading(true);
-      let url = "/";
+      let url = "/employees";
       if (department.trim()) {
         url = `/department?department=${encodeURIComponent(department)}`;
       }
