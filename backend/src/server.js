@@ -8,7 +8,7 @@ import cors from "cors";
 
 dotenv.config();
 const app=express();
-const port=process.env.port || 3001;
+const PORT=process.env.PORT || 3001;
 
 app.use (cors({
         origin:'http://localhost:5173'
@@ -18,7 +18,7 @@ app.use (cors({
 app.use(express.json());
 app.use("/employees",employeeRoutes)
 connectDB().then(()=>{
-    app.listen (port,() =>{
+    app.listen (PORT,() =>{
     console.log(`http://localhost:${port}/employees`);
 })
 })
