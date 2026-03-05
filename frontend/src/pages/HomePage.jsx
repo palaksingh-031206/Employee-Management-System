@@ -15,7 +15,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const res = await api.get("/employees");
+        const res = await api.get("/");
         setEmployees(res.data);
       } catch (error) {
         toast.error("Failed to load employees");
@@ -29,9 +29,9 @@ const HomePage = () => {
   const fetchEmployees = async (department = "") => {
     try {
       setLoading(true);
-      let url = "/employees";
+      let url = "/";
       if (department.trim()) {
-        url = `/employees/department?department=${encodeURIComponent(department)}`;
+        url = `/department?department=${encodeURIComponent(department)}`;
       }
       const res = await api.get(url);
       setEmployees(res.data.data || res.data);
@@ -48,7 +48,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const res = await api.get(
-        `/employees/department?department=${encodeURIComponent(departmentQuery)}`,
+        `/department?department=${encodeURIComponent(departmentQuery)}`,
       );
       setEmployees(res.data.data);
     } catch (error) {
@@ -69,7 +69,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const res = await api.get(
-        `/employees/search?employeeID=${encodeURIComponent(employeeIDQuery)}`,
+        `/search?employeeID=${encodeURIComponent(employeeIDQuery)}`,
       );
       setEmployees([res.data]);
     } catch (error) {
@@ -83,7 +83,7 @@ const HomePage = () => {
   const fetchEmployeesSortedBySalary = async () => {
     try {
       setLoading(true);
-      const res = await api.get(`/employees/sort/salary?order=${salaryOrder}`);
+      const res = await api.get(`/sort/salary?order=${salaryOrder}`);
       setEmployees(res.data.data || res.data);
     } catch (error) {
       toast.error("Failed to sort employees by salary");
