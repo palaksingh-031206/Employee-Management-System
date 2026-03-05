@@ -14,7 +14,7 @@ const EmployeeDetailPage = () => {
   useEffect(() => {
     const fetchEmployee = async () => {
       try {
-        const res = await api.get(`/${id}`);
+        const res = await api.get(`/employees${id}`);
 
         setEmployee({
           ...res.data,
@@ -39,7 +39,7 @@ const EmployeeDetailPage = () => {
       return;
 
     try {
-      await api.delete(`/${id}`);
+      await api.delete(`/employees${id}`);
       toast.success("Employee deleted successfully");
       navigate("/");
     } catch (error) {
@@ -62,7 +62,7 @@ const EmployeeDetailPage = () => {
     setSaving(true);
 
     try {
-      await api.put(`/${id}`, employee);
+      await api.put(`/employees${id}`, employee);
 
       toast.success("Employee updated successfully");
       navigate("/");
