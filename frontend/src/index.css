@@ -1,0 +1,55 @@
+/* index.css */
+
+/* Import Tailwind base styles */
+@tailwind base;
+
+/* Import Tailwind component classes */
+@tailwind components;
+
+/* Import Tailwind utility classes */
+@tailwind utilities;
+
+/* Optional: custom global styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb; /* light gray background */
+}
+
+/* Smooth transitions for buttons and links */
+button, a {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Custom scrollbar (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #a3a3a3;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+.search-container {
+  display: flex;
+  gap: 30px;
+  width: 800%;
+  max-width: 300px;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #1e232b;
+  color: white;
+  font-size: 16px;
+}
