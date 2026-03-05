@@ -12,7 +12,7 @@ const DashboardPage = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const res = await api.get("/");
+        const res = await api.get("/employees");
         setEmployees(res.data);
       } catch (error) {
         toast.error("Failed to load employees");
