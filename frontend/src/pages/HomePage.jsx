@@ -29,9 +29,9 @@ const HomePage = () => {
   const fetchEmployees = async (department = "") => {
     try {
       setLoading(true);
-      let url = "/";
+      let url = "/employees";
       if (department.trim()) {
-        url = `/department?department=${encodeURIComponent(department)}`;
+        url = `/employees/department?department=${encodeURIComponent(department)}`;
       }
       const res = await api.get(url);
       setEmployees(res.data.data || res.data);
@@ -48,7 +48,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const res = await api.get(
-        `/department?department=${encodeURIComponent(departmentQuery)}`,
+        `/employees/department?department=${encodeURIComponent(departmentQuery)}`,
       );
       setEmployees(res.data.data);
     } catch (error) {
@@ -69,7 +69,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const res = await api.get(
-        `/search?employeeID=${encodeURIComponent(employeeIDQuery)}`,
+        `/employees/search?employeeID=${encodeURIComponent(employeeIDQuery)}`,
       );
       setEmployees([res.data]);
     } catch (error) {
@@ -83,7 +83,7 @@ const HomePage = () => {
   const fetchEmployeesSortedBySalary = async () => {
     try {
       setLoading(true);
-      const res = await api.get(`/sort/salary?order=${salaryOrder}`);
+      const res = await api.get(`/employees/sort/salary?order=${salaryOrder}`);
       setEmployees(res.data.data || res.data);
     } catch (error) {
       toast.error("Failed to sort employees by salary");
