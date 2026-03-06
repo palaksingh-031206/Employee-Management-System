@@ -83,7 +83,7 @@ const HomePage = () => {
   const fetchEmployeesSortedBySalary = async () => {
     try {
       setLoading(true);
-      const res = await api.get(`/sort/salary?order=${salaryOrder}`);
+      const res = await api.get(`/employees/sort/salary?order=${salaryOrder}`);
       setEmployees(res.data.data || res.data);
     } catch (error) {
       toast.error("Failed to sort employees by salary");
