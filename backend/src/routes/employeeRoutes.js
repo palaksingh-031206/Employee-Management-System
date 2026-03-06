@@ -1,9 +1,9 @@
 import express from "express"
 import { createEmployee, deleteEmployee, filterByDepartment, getAllEmployeeDetails, getEmployeeByID, searchByEmployeeID, sortBySalary, updateEmployeeDetails } from "../controllers/employeeController.js"
 const router=express.Router()
-router.get("/employees/search",searchByEmployeeID);
-router.get("/employees/sort/salary",sortBySalary);
-router.get("/employees/department",filterByDepartment);
+router.get(/search",searchByEmployeeID);
+router.get("/sort/salary",sortBySalary);
+router.get("/department",filterByDepartment);
 
 router.get("/",getAllEmployeeDetails)
 router.get("/:id",getEmployeeByID);
