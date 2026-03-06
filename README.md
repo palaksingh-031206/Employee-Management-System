@@ -83,6 +83,17 @@ backend
 └── server.js
 ```
 
+Installation and Setup
+Backend Setup
+cd backend
+npm install
+npm start
+
+Frontend Setup
+cd frontend
+npm install
+npm run dev
+
 📊 Dashboard Overview
 The dashboard provides useful insights such as:
 
@@ -103,6 +114,7 @@ This helps administrators quickly understand workforce statistics.
 👨‍💻 Author
 Palak Singh
 GitHub: https://github.com/palaksingh-031206
+
 
 
 
