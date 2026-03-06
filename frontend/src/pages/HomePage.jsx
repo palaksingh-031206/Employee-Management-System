@@ -81,16 +81,21 @@ const HomePage = () => {
   };
 
   const fetchEmployeesSortedBySalary = async () => {
-    try {
-      setLoading(true);
-      const res = await api.get(`/employees/sort/salary?order=${salaryOrder}`);
-      setEmployees(res.data.data || res.data);
-    } catch (error) {
-      toast.error("Failed to sort employees by salary");
-    } finally {
-      setLoading(false);
-    }
-  };
+  if (!salaryOrder) {
+    toast.error("Please select sorting order");
+    return;
+  }
+
+  try {
+    setLoading(true);
+    const res = await api.get(`/employees/sort/salary?order=${salaryOrder}`);
+    setEmployees(res.data.data);
+  } catch (error) {
+    toast.error("Failed to sort employees by salary");
+  } finally {
+    setLoading(false);
+  }
+};
 
   const resetSalarySort = () => {
     setSalaryOrder("");
@@ -227,7 +232,7 @@ const HomePage = () => {
           </select>
 
           <button
-            onClick={fetchEmployeesSortedBySalary}
+            onClick={() => fetchEmployeesSortedBySalary()}
             className="btn btn-secondary h-12 w-full font-semibold"
           >
             Sort by Salary 💰
