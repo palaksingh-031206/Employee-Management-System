@@ -44,7 +44,7 @@ const EmployeeCard = ({ employee, setEmployees }) => {
   return (
     <>
       <Link
-        to={`/employees/${employee._id}`}
+        to={`/employee/${employee._id}`}
         className={`relative block rounded-xl bg-base-100 p-4 border transition-all duration-200
         ${isActive ? "border-primary shadow-lg" : "border-base-300"}
         hover:border-primary hover:shadow-xl`}
