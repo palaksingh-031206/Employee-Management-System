@@ -5,7 +5,7 @@ import api from "../lib/axios";
 import toast from "react-hot-toast";
 import { useState } from "react";
 
-const EmployeeCard = ({ employee, setEmployees }) => {
+const EmployeeCard = ({ employees, setEmployees }) => {
   const [showModal, setShowModal] = useState(false);
   const location = useLocation();
   const isActive = location.pathname === `/employee/${employee._id}`;
