@@ -1,4 +1,3 @@
-﻿# Employee-Management-System
 # Employee Management System
 
 A **Full Stack Employee Management System** built using **React, Node.js, Express, and MongoDB**.
@@ -53,19 +52,26 @@ employee-management-system
 │   │
 │   ├── pages
 │   │   ├── HomePage.jsx
-│   │   ├── CreateEmployee.jsx
-│   │   ├── EditEmployee.jsx
-│   │   └── Dashboard.jsx
+│   │   ├── CreatePage.jsx
+│   │   ├── EmployeeDetailPage.jsx
+│   │   └── DashboardPage.jsx
 │   │
 │   ├── lib
 │   │   └── axios.js
+|   |   └── utils.js
 │   │
 │   └── App.jsx
+|   └── index.css
+|   └── main.jsx
+|
 
 backend
+
+├── config
+|   └── db.js
 │
 ├── models
-│   └── Employee.js
+│   └── employeeModel.js
 │
 ├── routes
 │   └── employeeRoutes.js
@@ -94,7 +100,8 @@ This helps administrators quickly understand workforce statistics.
 
 👨‍💻 Author
 Palak Singh
-GitHub: https://github.com/your-github-username
+GitHub: https://github.com/palaksingh-031206
+
 
 
 
