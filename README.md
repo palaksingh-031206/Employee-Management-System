@@ -38,7 +38,7 @@ Backend
 
 Deployment
 Render (Frontend + Backend)
-
+---
 📂 Project Structure
 employee-management-system
 
@@ -82,20 +82,21 @@ backend
 │
 └── server.js
 ```
-
-##⚙️Installation and Setup
-#Backend Setup
+---
+⚙️Installation and Setup
+Backend Setup
 ```
 cd backend
 npm install
 npm start
 ```
-#Frontend Setup
+Frontend Setup
 ```
 cd frontend
 npm install
 npm run dev
 ```
+---
 📊 Dashboard Overview
 The dashboard provides useful insights such as:
 
@@ -104,7 +105,7 @@ The dashboard provides useful insights such as:
 * Total Designations
 * Average Salary
 This helps administrators quickly understand workforce statistics.
-
+---
 🔮 Future Improvements
 
 * Employee authentication system
@@ -112,10 +113,11 @@ This helps administrators quickly understand workforce statistics.
 * Pagination for large employee lists
 * Export employee data to Excel
 * Advanced analytics dashboard
-
+---
 👨‍💻 Author
 Palak Singh
 GitHub: https://github.com/palaksingh-031206
+
 
 
 
