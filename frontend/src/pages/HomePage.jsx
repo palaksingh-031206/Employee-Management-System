@@ -234,9 +234,6 @@ const HomePage = () => {
             <option value="asc">Ascending ↑</option>
             <option value="desc">Descending ↓</option>
           </select>
-
-          
-          </button>
         </div>
 
         {/* Loading */}
