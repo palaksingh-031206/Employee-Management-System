@@ -15,9 +15,6 @@ The system also provides a **dashboard overview with useful statistics** such as
 * 🏢 Filter employees by **Department**
 * 💰 Sort employees by **Salary**
 * 📊 Dashboard with statistics
-* 🟢 Activate / Deactivate employees
-* 📅 Track employee joining dates
-* 📱 Responsive and modern UI
 
 ---
 
